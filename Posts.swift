@@ -55,29 +55,27 @@ class Posts {
         postGandhi.numComments = 22
         postGandhi.statusImageUrl = "https://s3-us-west-2.amazonaws.com/letsbuildthatapp/gandhi_background.jpg"
         
-//        let postBillGates = Post()
-//        postBillGates.name = "Bill Gates"
-//        postBillGates.profileImageName = "bill_gates_profile"
-//        postBillGates.statusText = "Success is a lousy teacher. It seduces smart people into thinking they can't lost.\n\n" +
-//            "Your most unhappy customers are your greatest source of learing.\n\n" +
-//            "As we look ahead into the next century, leaders will be those who empower others."
-//        postBillGates.statusImageUrl = "https://s3-us-west-2.amazonaws.com/letsbuildthatapp/gates_background.jpg"
-//        
-//        let postTimCook = Post()
-//        postTimCook.name = "Tim Cook"
-//        postTimCook.profileImageName = "tim_cook_profile"
-//        postTimCook.statusText = "The worst thing in the world that can happen to you if you're an engineer that was given his life to something is for someone to rip it off and put their name on it."
-//        postTimCook.statusImageUrl = "https://s3-us-west-2.amazonaws.com/letsbuildthatapp/Tim+Cook.jpg"
-//        
-//        let postDonaldTrump = Post()
-//        postDonaldTrump.name = "Donald Trump"
-//        postDonaldTrump.profileImageName = "donald_trump_profile"
-//        postDonaldTrump.statusText = "An 'extremely credible source' has called my office and " +
-//            "told me that Barack Obama's birth certificate is a fraud."
-//        postDonaldTrump.statusImageUrl = "https://s3-us-west-2.amazonaws.com/letsbuildthatapp/trump_background.jpg"
-
-//        postsList = [postMark, postSteve, postGandhi, postBillGates, postTimCook, postDonaldTrump]
+        let postBillGates = Post()
+        postBillGates.name = "Bill Gates"
+        postBillGates.profileImageName = "bill_gates_profile"
+        postBillGates.statusText = "Success is a lousy teacher. It seduces smart people into thinking they can't lost.\n\n" +
+            "Your most unhappy customers are your greatest source of learing.\n\n" +
+            "As we look ahead into the next century, leaders will be those who empower others."
+        postBillGates.statusImageUrl = "https://s3-us-west-2.amazonaws.com/letsbuildthatapp/gates_background.jpg"
         
+        let postTimCook = Post()
+        postTimCook.name = "Tim Cook"
+        postTimCook.profileImageName = "tim_cook_profile"
+        postTimCook.statusText = "The worst thing in the world that can happen to you if you're an engineer that was given his life to something is for someone to rip it off and put their name on it."
+        postTimCook.statusImageUrl = "https://s3-us-west-2.amazonaws.com/letsbuildthatapp/Tim+Cook.jpg"
+        
+        let postDonaldTrump = Post()
+        postDonaldTrump.name = "Donald Trump"
+        postDonaldTrump.profileImageName = "donald_trump_profile"
+        postDonaldTrump.statusText = "An 'extremely credible source' has called my office and " +
+            "told me that Barack Obama's birth certificate is a fraud."
+        postDonaldTrump.statusImageUrl = "https://s3-us-west-2.amazonaws.com/letsbuildthatapp/trump_background.jpg"
+
         postsList = [postMark, postSteve, postGandhi]
     }
     

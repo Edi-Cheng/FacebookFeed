@@ -10,21 +10,28 @@ import UIKit
 
 class FeedCell: UICollectionViewCell {
     
+    var feedController: FeedController?
+    
+    func animate() {
+        feedController?.animateImageView(statusImageView: statusImageView)
+    }
+    
     var post: Post? {
         didSet {
             
             statusImageView.image = nil
             
-            if let statusImageName = post?.statusImageName {
-                statusImageView.image = UIImage(named: statusImageName)
-                loader.stopAnimating()
+            if let imageName = post?.statusImageName {
+                self.statusImageView.image = UIImage(named: imageName)
+                self.loader.stopAnimating()
             }
             
 //            if let statusImageUrl = post?.statusImageUrl,
 //                let url = URL(string: statusImageUrl) {
+//                
 //                URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
 //                    if error != nil {
-//                        print("George: \(String(describing: error))")
+//                        print("error: \(String(describing: error))")
 //                    }
 //                    
 //                    guard let imageData = data else {
@@ -113,6 +120,7 @@ class FeedCell: UICollectionViewCell {
         imageView.image = UIImage(named: "zuckdog")
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     
@@ -160,6 +168,8 @@ class FeedCell: UICollectionViewCell {
         addSubview(shareButton)
         
         setupStatusImageViewLoader()
+        
+        statusImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(FeedCell.animate as (FeedCell) -> () -> ())))
         
         addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView, nameLabel)
         
