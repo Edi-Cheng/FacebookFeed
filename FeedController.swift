@@ -50,7 +50,7 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         if let statusText = posts[indexPath].statusText {
             
             let rect = NSString(string: statusText).boundingRect(with: CGSize(width: view.frame.width, height: 1000)
-, options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize:14)], context: nil)
+, options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize:14)], context: nil)
             
             let knowHeight: CGFloat = 8 + 44 + 4 + 4 + 200 + 8 + 24 + 8 + 44
             
@@ -143,7 +143,7 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
     }
     
-    func zoomOut() {
+    @objc func zoomOut() {
         
         if let startingFrame = statusImageView!.superview?.convert(statusImageView!.frame, to: nil) {
             

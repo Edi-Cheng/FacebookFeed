@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 51, green: 90, blue: 149)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         UITabBar.appearance().tintColor = UIColor.rgb(red: 70, green: 146, blue: 250)
         

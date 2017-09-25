@@ -12,7 +12,7 @@ class FeedCell: UICollectionViewCell {
     
     var feedController: FeedController?
     
-    func animate() {
+    @objc func animate() {
         feedController?.animateImageView(statusImageView: statusImageView)
     }
     
@@ -54,14 +54,14 @@ class FeedCell: UICollectionViewCell {
     private func setupNameLocationStatusAndProfileImage() {
         
         if let name = post?.name {
-            let attributedText = NSMutableAttributedString(string: name, attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14)])
+            let attributedText = NSMutableAttributedString(string: name, attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)])
             
-            attributedText.append(NSAttributedString(string: "\nDecember 18  •  San Franceisco  •  ", attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 12), NSForegroundColorAttributeName: UIColor.rgb(red: 155, green: 161, blue: 171)]))
+            attributedText.append(NSAttributedString(string: "\nDecember 18  •  San Franceisco  •  ", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedStringKey.foregroundColor: UIColor.rgb(red: 155, green: 161, blue: 171)]))
             
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = 4
             
-            attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
+            attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
             
             let attachment = NSTextAttachment()
             attachment.image = UIImage(named: "globe_small")
